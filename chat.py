@@ -1,10 +1,14 @@
+import os
 import sys
 import openai
+from dotenv import load_dotenv
+
 
 def main():
     print('入力メッセージ：', sys.argv[1])
 
-    openai.api_key = ''
+    load_dotenv()
+    openai.api_key = os.getenv('API_KEY')
     response = openai.ChatCompletion.create(
         model="gpt-4-0314",
         messages=[
