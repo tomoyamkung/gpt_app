@@ -1,6 +1,7 @@
 # gpt_app
 
 ```sh
+$ cp sample.env .env  ## put the ChatGPT secret key in the .env
 $ docker build -t gpt_app .
 $ docker run -it --rm gpt_app "カレーライスを作りたいです。一般的なカレーライスの材料を教えてください。"
 入力メッセージ： カレーライスを作りたいです。一般的なカレーライスの材料を教えてください。
